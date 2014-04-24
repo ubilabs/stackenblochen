@@ -1,0 +1,24 @@
+{
+  "name": "stackenblochen",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ubilabs/stackenblochen",
+  "authors": [
+    "Robert Katzki <katzki@ubilabs.net>"
+  ],
+  "description": "A stylus grid system for rectanglers.",
+  "main": "stackenblochen.styl",
+  "keywords": [
+    "stylus",
+    "grid",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ]
+}
