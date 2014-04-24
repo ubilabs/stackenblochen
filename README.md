@@ -2,7 +2,7 @@
 
 ## Description
 
-Stackenblochen is a stylus grid system for rectangles.
+Stackenblochen is a stylus grid system for rectanglers.
 
 It is inspired by the [foundation](http://foundation.zurb.com/docs/components/grid.html) grid system and works very similar.
 
