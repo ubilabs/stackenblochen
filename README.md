@@ -14,9 +14,9 @@ You can either copy the `stackenblochen.styl` in your project, or install it via
 bower install stackenblochen --save
 ```
 
-Include the `stackenblochen.styl` in your stylus file, then generate the grid like this:
-
 ## Usage
+
+Include the `stackenblochen.styl` in your stylus file, then generate the grid like this:
 
 ```stylus
 @import 'stackenblochen'
