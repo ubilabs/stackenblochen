@@ -1,0 +1,66 @@
+@import 'nib'
+
+/**
+ * Configuration
+ */
+$grid-columns = 12
+$grid-gutter = 2rem
+$grid-width = 75rem
+
+/**
+ * Generate grid columns with the passed class
+ */
+grid($class = 'small')
+  gridBase()
+
+  // Basic columns
+  for $column in (1 .. $grid-columns)
+    $percent-width = 1% * (($column / $grid-columns) * 100)
+    .{$class}-{$column}
+      width $percent-width
+
+  // Offset for the columns
+  for $column in (0 .. ($grid-columns - 1))
+    $percent-width = 1% * (($column / $grid-columns) * 100)
+    .{$class}-offset-{$column}
+      margin-left: $percent-width !important
+
+  // Centered and uncentered columns
+  .column, .columns
+    &.{$class}-centered
+      margin-left: auto
+      margin-right: auto
+      float: none
+    &.{$class}-uncentered
+      margin-left: 0
+      margin-right: 0
+      float: left !important
+
+/**
+ * Generate the base of the grid
+ *
+ * Get's called when creating grid columns
+ */
+gridBase()
+  .grid
+    display: block
+    width: 100%
+    max-width: $grid-width
+    overflow hidden
+    list-style none
+    margin: 0 auto
+    clearfix()
+    *
+      box-sizing border-box
+    .grid
+      margin 0 -($grid-gutter / 2)
+
+  .column, .columns
+    float left
+    padding 0 ($grid-gutter / 2)
+    position relative
+    width: 100%
+    img
+      max-width 100%
+      height auto
+      ms-interpolation-mode bicubic
