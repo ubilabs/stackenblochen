@@ -11,8 +11,6 @@ $grid-width = 75rem
  * Generate grid columns with the passed class
  */
 grid($class = 'small')
-  gridBase()
-
   // Basic columns
   for $column in (1 .. $grid-columns)
     $percent-width = 1% * (($column / $grid-columns) * 100)

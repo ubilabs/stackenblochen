@@ -26,6 +26,7 @@ $grid-columns = 12
 $grid-gutter = 2rem
 $grid-width = 75rem
 
+gridBase()
 grid()
 @media (min-width: 30em)
   grid('medium')
