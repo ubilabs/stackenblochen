@@ -16,22 +16,17 @@ bower install stackenblochen --save
 
 ## Usage
 
-Include the `stackenblochen.styl` in your stylus file, then generate the grid like this:
+Cofnigure and include the `stackenblochen.styl` in your stylus file:
 
 ```stylus
-@import 'stackenblochen'
-
 // Default values
 $grid-columns = 12
 $grid-gutter = 2rem
 $grid-width = 75rem
+$grid-medium = 25em
+$grid-large = 50em
 
-gridBase()
-grid()
-@media (min-width: 30em)
-  grid('medium')
-@media (min-width: 55em)
-  grid('large')
+@import 'stackenblochen'
 ```
 
 In your html, do something like this:

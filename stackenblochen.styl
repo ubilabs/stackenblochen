@@ -3,9 +3,17 @@
 /**
  * Configuration
  */
-$grid-columns = 12
-$grid-gutter = 2rem
-$grid-width = 75rem
+$grid-columns ?= 12
+$grid-gutter ?= 2rem
+$grid-width ?= 75rem
+$grid-medium ?= 25em
+$grid-large ?= 50em
+
+/**
+ * Helper variables
+ */
+$media-query-medium = '(min-width: ' + $grid-medium + ')'
+$media-query-large = '(min-width: ' + $grid-large + ')'
 
 /**
  * Generate grid columns with the passed class
@@ -62,3 +70,13 @@ gridBase()
       max-width 100%
       height auto
       ms-interpolation-mode bicubic
+
+/**
+ * Build the grid!
+ */
+gridBase()
+grid()
+@media $media-query-medium
+  grid('medium')
+@media $media-query-large
+  grid('large')
