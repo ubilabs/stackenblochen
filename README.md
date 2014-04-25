@@ -27,9 +27,9 @@ $grid-gutter = 2rem
 $grid-width = 75rem
 
 grid()
-@media '(min-width: 48rem)'
+@media (min-width: 30em)
   grid('medium')
-@media '(min-width: 64rem)'
+@media (min-width: 55em)
   grid('large')
 ```
 
