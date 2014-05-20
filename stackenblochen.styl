@@ -15,29 +15,39 @@ $grid-large ?= 50em
 $media-query-medium = '(min-width: ' + $grid-medium + ')'
 $media-query-large = '(min-width: ' + $grid-large + ')'
 
+$classes = 'small' 'medium' 'large'
+
 /**
  * Generate grid columns with the passed class
  */
-grid($class = 'small')
+grid($currentClass = 'small')
   // Basic columns
   for $column in (1 .. $grid-columns)
     $percent-width = 1% * (($column / $grid-columns) * 100)
-    .{$class}-{$column}
+    .{$currentClass}-{$column}
       width $percent-width
 
   // Offset for the columns
   for $column in (0 .. ($grid-columns - 1))
     $percent-width = 1% * (($column / $grid-columns) * 100)
-    .{$class}-offset-{$column}
+    .{$currentClass}-offset-{$column}
       margin-left: $percent-width !important
+
+  for $class in $classes
+    if ($class == $currentClass)
+      .show-for-{$class}
+        display: inherit !important
+    else
+      .hide-for-{$class}
+        display: none
 
   // Centered and uncentered columns
   .column, .columns
-    &.{$class}-centered
+    &.{$currentClass}-centered
       margin-left: auto
       margin-right: auto
       float: none
-    &.{$class}-uncentered
+    &.{$currentClass}-uncentered
       margin-left: 0
       margin-right: 0
       float: left !important
