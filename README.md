@@ -16,7 +16,7 @@ bower install stackenblochen --save
 
 ## Usage
 
-Cofnigure and include the `stackenblochen.styl` in your stylus file:
+Configure and include the `stackenblochen.styl` in your stylus file:
 
 ```stylus
 // Default values
