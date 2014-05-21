@@ -36,14 +36,14 @@ grid($currentClass = 'small')
   for $class in $classes
     if ($class == $currentClass)
       .show-on-{$class}
-        display: inherit
+        display: inherit !important
       .hide-on-{$class}
-        display: none
+        display: none !important
     else
       .show-on-{$class}
-        display: inherit
+        display: none !important
       .hide-on-{$class}
-        display: inherit
+        display: inherit !important
 
   // Centered and uncentered columns
   .column, .columns
