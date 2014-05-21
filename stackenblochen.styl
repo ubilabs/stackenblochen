@@ -62,7 +62,8 @@ grid($currentClass = 'small')
  * Get's called when creating grid columns
  */
 gridBase()
-  .grid
+  .grid,
+  .stackenblochen
     display: block
     width: 100%
     max-width: $grid-width
@@ -72,7 +73,8 @@ gridBase()
     clearfix()
     *
       box-sizing: border-box
-    .grid
+    .grid,
+    .stackenblochen
       width: auto
       max-width: none
       margin-left: -($grid-gutter / 2)
