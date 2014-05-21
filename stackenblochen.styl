@@ -35,11 +35,15 @@ grid($currentClass = 'small')
 
   for $class in $classes
     if ($class == $currentClass)
-      .show-for-{$class}
-        display: inherit !important
-    else
-      .hide-for-{$class}
+      .show-on-{$class}
+        display: inherit
+      .hide-on-{$class}
         display: none
+    else
+      .show-on-{$class}
+        display: inherit
+      .hide-on-{$class}
+        display: inherit
 
   // Centered and uncentered columns
   .column, .columns

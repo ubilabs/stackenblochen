@@ -32,13 +32,13 @@ $grid-large = 50em
 In your html, do something like this:
 
 ```html
-<div class="grid show-for-small hide-for-medium">
+<div class="grid show-on-small hide-on-medium">
   <div class="small-12 large-6 columns"></div>
   <div class="small-6 large-3 columns"></div>
   <div class="small-6 large-3 columns"></div>
   <div class="small-12 columns"></div>
 </div>
-<div class="grid hide-for-large">
+<div class="grid hide-on-large">
   <div class="small-6 medium-4 small-centered columns">
     <div class="grid">
       <div class="small-6 columns"></div>
