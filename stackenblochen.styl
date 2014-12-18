@@ -37,41 +37,29 @@ grid($currentClass = 'small')
     if ($class == $currentClass)
       .show-on-{$class}
         display: inherit !important
-      .hide-on-{$class}
-        display: none !important
-
       // Add support for table elements specific display values
       table.show-on-{$class}
         display: table !important
-      table.hide-on-{$class}
-        display: none !important
       tr.show-on-{$class}
         display: table-row !important
-      tr.hide-on-{$class}
-        display: none !important
       td.show-on-{$class}, th.show-on-{$class}
         display: table-cell !important
-      td.hide-on-{$class}, th.hide-on-{$class}
+      .hide-on-{$class}, table.hide-on-{$class},
+      tr.hide-on-{$class}, td.hide-on-{$class}, th.hide-on-{$class}
         display: none !important
     else
-      .show-on-{$class}
-        display: none !important
       .hide-on-{$class}
         display: inherit !important
-
       // Add support for table elements specific display values
-      table.show-on-{$class}
-        display: none !important
       table.hide-on-{$class}
         display: table !important
-      tr.show-on-{$class}
-        display: none !important
       tr.hide-on-{$class}
         display: table-row !important
-      td.show-on-{$class}, th.show-on-{$class}
-        display: none !important
       td.hide-on-{$class}, th.hide-on-{$class}
         display: table-cell !important
+      .show-on-{$class}, table.show-on-{$class},
+      tr.show-on-{$class}, td.show-on-{$class}, th.show-on-{$class}
+        display: none !important
 
   // Centered and uncentered columns
   .column, .columns
