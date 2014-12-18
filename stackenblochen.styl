@@ -39,11 +39,27 @@ grid($currentClass = 'small')
         display: inherit !important
       .hide-on-{$class}
         display: none !important
+
+      // Add support for table elements specific display values
+      table.show-on-{$class}
+        display: table !important
+      tr.show-on-{$class}
+        display: table-row !important
+      td.show-on-{$class}, th.show-on-{$class}
+        display: table-cell !important
     else
       .show-on-{$class}
         display: none !important
       .hide-on-{$class}
         display: inherit !important
+
+      // Add support for table elements specific display values
+      table.hide-on-{$class}
+        display: table !important
+      tr.hide-on-{$class}
+        display: table-row !important
+      td.hide-on-{$class}, th.hide-on-{$class}
+        display: table-cell !important
 
   // Centered and uncentered columns
   .column, .columns
