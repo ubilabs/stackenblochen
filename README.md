@@ -1,5 +1,7 @@
 # Stackenblochen grid system
 
+[![Join the chat at https://gitter.im/ubilabs/stackenblochen](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ubilabs/stackenblochen?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Description
 
 Stackenblochen is a stylus grid system for rectanglers.
